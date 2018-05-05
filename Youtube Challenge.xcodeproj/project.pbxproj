@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		E9FB54CD209C051E000B1E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54CC209C051E000B1E8B /* AppDelegate.swift */; };
-		E9FB54CF209C051E000B1E8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54CE209C051E000B1E8B /* ViewController.swift */; };
-		E9FB54D2209C051E000B1E8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FB54D0209C051E000B1E8B /* Main.storyboard */; };
 		E9FB54D4209C051F000B1E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FB54D3209C051F000B1E8B /* Assets.xcassets */; };
 		E9FB54D7209C051F000B1E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FB54D5209C051F000B1E8B /* LaunchScreen.storyboard */; };
+		E9FB54E6209C054D000B1E8B /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54E3209C054D000B1E8B /* RequestManager.swift */; };
+		E9FB54E7209C054D000B1E8B /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54E4209C054D000B1E8B /* NetworkLayer.swift */; };
+		E9FB54E8209C054D000B1E8B /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54E5209C054D000B1E8B /* NetworkDispatcher.swift */; };
+		E9FB54EA209C057E000B1E8B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54E9209C057E000B1E8B /* SearchViewController.swift */; };
+		E9FB54EC209C05DB000B1E8B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54EB209C05DB000B1E8B /* Constants.swift */; };
+		E9FB54EE209E167E000B1E8B /* SearchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54ED209E167E000B1E8B /* SearchRequests.swift */; };
+		E9FB54F0209E2BA8000B1E8B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54EF209E2BA8000B1E8B /* SearchViewModel.swift */; };
+		E9FB54F2209E2BDE000B1E8B /* SearchViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54F1209E2BDE000B1E8B /* SearchViewController+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9FB54C9209C051E000B1E8B /* Youtube Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FB54CC209C051E000B1E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9FB54CE209C051E000B1E8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E9FB54D1209C051E000B1E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9FB54D3209C051F000B1E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9FB54D6209C051F000B1E8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9FB54D8209C051F000B1E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FB54E3209C054D000B1E8B /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		E9FB54E4209C054D000B1E8B /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		E9FB54E5209C054D000B1E8B /* NetworkDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		E9FB54E9209C057E000B1E8B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E9FB54EB209C05DB000B1E8B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Source/Constants.swift; sourceTree = "<group>"; };
+		E9FB54ED209E167E000B1E8B /* SearchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequests.swift; sourceTree = "<group>"; };
+		E9FB54EF209E2BA8000B1E8B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		E9FB54F1209E2BDE000B1E8B /* SearchViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +67,64 @@
 			isa = PBXGroup;
 			children = (
 				E9FB54CC209C051E000B1E8B /* AppDelegate.swift */,
-				E9FB54CE209C051E000B1E8B /* ViewController.swift */,
-				E9FB54D0209C051E000B1E8B /* Main.storyboard */,
+				E9FB54EB209C05DB000B1E8B /* Constants.swift */,
+				E9FB54E0209C054D000B1E8B /* Controllers */,
+				E9FB54E1209C054D000B1E8B /* Models */,
+				E9FB54E2209C054D000B1E8B /* Networking */,
+				E9FB54DE209C054D000B1E8B /* ViewModels */,
+				E9FB54DF209C054D000B1E8B /* Views */,
 				E9FB54D3209C051F000B1E8B /* Assets.xcassets */,
 				E9FB54D5209C051F000B1E8B /* LaunchScreen.storyboard */,
 				E9FB54D8209C051F000B1E8B /* Info.plist */,
 			);
 			path = "Youtube Challenge";
+			sourceTree = "<group>";
+		};
+		E9FB54DE209C054D000B1E8B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB54EF209E2BA8000B1E8B /* SearchViewModel.swift */,
+			);
+			name = ViewModels;
+			path = Source/ViewModels;
+			sourceTree = "<group>";
+		};
+		E9FB54DF209C054D000B1E8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Source/Views;
+			sourceTree = "<group>";
+		};
+		E9FB54E0209C054D000B1E8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB54E9209C057E000B1E8B /* SearchViewController.swift */,
+				E9FB54F1209E2BDE000B1E8B /* SearchViewController+Constraints.swift */,
+			);
+			name = Controllers;
+			path = Source/Controllers;
+			sourceTree = "<group>";
+		};
+		E9FB54E1209C054D000B1E8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Source/Models;
+			sourceTree = "<group>";
+		};
+		E9FB54E2209C054D000B1E8B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB54E3209C054D000B1E8B /* RequestManager.swift */,
+				E9FB54E4209C054D000B1E8B /* NetworkLayer.swift */,
+				E9FB54E5209C054D000B1E8B /* NetworkDispatcher.swift */,
+				E9FB54ED209E167E000B1E8B /* SearchRequests.swift */,
+			);
+			name = Networking;
+			path = Source/Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +187,6 @@
 			files = (
 				E9FB54D7209C051F000B1E8B /* LaunchScreen.storyboard in Resources */,
 				E9FB54D4209C051F000B1E8B /* Assets.xcassets in Resources */,
-				E9FB54D2209C051E000B1E8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +197,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9FB54CF209C051E000B1E8B /* ViewController.swift in Sources */,
+				E9FB54EE209E167E000B1E8B /* SearchRequests.swift in Sources */,
+				E9FB54EA209C057E000B1E8B /* SearchViewController.swift in Sources */,
+				E9FB54F0209E2BA8000B1E8B /* SearchViewModel.swift in Sources */,
+				E9FB54E7209C054D000B1E8B /* NetworkLayer.swift in Sources */,
+				E9FB54F2209E2BDE000B1E8B /* SearchViewController+Constraints.swift in Sources */,
+				E9FB54E6209C054D000B1E8B /* RequestManager.swift in Sources */,
+				E9FB54E8209C054D000B1E8B /* NetworkDispatcher.swift in Sources */,
 				E9FB54CD209C051E000B1E8B /* AppDelegate.swift in Sources */,
+				E9FB54EC209C05DB000B1E8B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E9FB54D0209C051E000B1E8B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9FB54D1209C051E000B1E8B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E9FB54D5209C051F000B1E8B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

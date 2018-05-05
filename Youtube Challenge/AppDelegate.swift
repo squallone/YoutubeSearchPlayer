@@ -13,10 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+
+      
+      window = UIWindow(frame: UIScreen.main.bounds)
+      let searchViewController = SearchViewController()
+      let navigationViewController = UINavigationController(rootViewController: searchViewController)
+      window?.rootViewController = navigationViewController
+      window?.makeKeyAndVisible()
+      return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
