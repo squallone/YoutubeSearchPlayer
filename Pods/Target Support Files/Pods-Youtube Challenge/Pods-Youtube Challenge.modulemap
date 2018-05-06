@@ -1,0 +1,6 @@
+framework module Pods_Youtube_Challenge {
+  umbrella header "Pods-Youtube Challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

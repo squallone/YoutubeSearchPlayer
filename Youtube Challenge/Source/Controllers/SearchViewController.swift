@@ -11,7 +11,6 @@ import UIKit
 class SearchViewController: UIViewController {
   
   // MARK: - Properties
-  
   let viewModel = SearchViewModel()
   
   // MARK: - Views
@@ -39,29 +38,30 @@ class SearchViewController: UIViewController {
     super.viewDidLoad()
     
     // Bind state
-    viewModel.bindState { (state) in
+    viewModel.bindState { [unowned self] (state) in
       switch state {
       case .fetching:
         break
       case .success:
-        break
+        self.tableView.reloadData()
       default:
         break
       }
     }
+    
+    viewModel.search(text: "yuya")
   }
   
   deinit {
     viewModel.unbindState()
   }
-  
 }
 
 // MARK: - UITableView Data Source
 extension SearchViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return viewModel.count()
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

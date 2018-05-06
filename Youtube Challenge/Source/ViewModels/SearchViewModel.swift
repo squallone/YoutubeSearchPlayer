@@ -17,6 +17,8 @@ class SearchViewModel {
   }
   
   // MARK: - Properties
+  private var dataSource: [ItemModel] = []
+  
   typealias Listener = (_ status: State) -> Void
   var listener: Listener?
   var state: State = .idle {
@@ -32,6 +34,20 @@ class SearchViewModel {
   
   func unbindState() {
     self.listener = nil
+  }
+  
+  // MARK: - Networking
+  func search(text: String) {
+    state = .fetching
+    RequestManager.shared.search(text) { (items) in
+      self.dataSource = items
+      self.state = .success
+    }
+  }
+  
+  // MARK: - Data
+  func count() -> Int {
+    return dataSource.count
   }
   
   // MARK: - Private

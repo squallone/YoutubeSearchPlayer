@@ -63,13 +63,15 @@ class NetworkDispatcher: Dispatcher {
           return nil
         }
         components.queryItems = queryParams
+        components.path = request.path
         urlRequest.url = components.url
+    
       }
 
     default:
       break
     }    
-    return nil
+    return urlRequest
   }
 
 }

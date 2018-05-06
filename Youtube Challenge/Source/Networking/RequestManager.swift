@@ -11,18 +11,18 @@ import UIKit
 class RequestManager {
 
   // MARK: - Properties
-  private let environment = Environment(httpProtocol: "http://", host: "www.googleapis.com", port: "")
+  private let environment = Environment(httpProtocol: "https://", host: "www.googleapis.com", port: "")
   static let shared = RequestManager()
   
   // MARK: - Private
   
   private init() { }
   
-  func search(text: String, success:((Any) -> Void)) {
-   
+  func search(_ text: String, success: @escaping (([ItemModel]) -> Void)) {
     NetworkDispatcher(environment: environment).fetch(request: SearchRequests.search(text: text), success: { (response) in
-      
-      
+      if let items = ItemModel.deserialize(with: response) {
+        success(items)
+      }
       
     }) { (error) in
       

@@ -13,7 +13,7 @@ enum SearchRequests: RequestProtocol {
   var path: String {
     switch  self {
     case .search(_):
-      return "youtube/v3/search"
+      return "/youtube/v3/search"
     }
   }
   
@@ -27,7 +27,12 @@ enum SearchRequests: RequestProtocol {
   var parameters: RequestParams {
     switch  self {
     case .search(let text):
-      return .url(["key": Constants.Youtube.appKey, "order": "date", "maxResults": "10", "q": text, "type": "video"])
+      return .url(["key": Constants.Youtube.appKey,
+                   "order": "date",
+                   "maxResults": "10",
+                   "q": text,
+                   "part": "snippet",
+                   "type": "video"])
     }
   }
   
