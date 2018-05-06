@@ -7,5 +7,10 @@
 //
 
 struct Constants {
-    static let reverseDomain = "com.applicaster.youtube-search"
+  
+  static let reverseDomain = "com.applicaster.youtube-search"
+  
+  struct Youtube {
+    static let appKey = "AIzaSyC6oC_pOXuljjiOSFVLbmjejE92YSQ5oSk"
+  }
 }

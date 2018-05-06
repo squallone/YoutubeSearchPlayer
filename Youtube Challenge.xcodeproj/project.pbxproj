@@ -118,8 +118,8 @@
 		E9FB54E2209C054D000B1E8B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E9FB54E3209C054D000B1E8B /* RequestManager.swift */,
 				E9FB54E4209C054D000B1E8B /* NetworkLayer.swift */,
+				E9FB54E3209C054D000B1E8B /* RequestManager.swift */,
 				E9FB54E5209C054D000B1E8B /* NetworkDispatcher.swift */,
 				E9FB54ED209E167E000B1E8B /* SearchRequests.swift */,
 			);

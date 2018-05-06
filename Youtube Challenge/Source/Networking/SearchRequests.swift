@@ -8,32 +8,32 @@
 
 enum SearchRequests: RequestProtocol {
   
-  case search
+  case search(text: String)
   
   var path: String {
     switch  self {
-    case .search:
+    case .search(_):
       return "youtube/v3/search"
     }
   }
   
   var method: HTTPMethod {
     switch  self {
-    case .search:
+    case .search(_):
       return .get
     }
   }
   
-  var parameters: [String : Any] {
+  var parameters: RequestParams {
     switch  self {
-    case .search:
-      return ["key": "", "order": "date", "maxResults": "10", "q":"yuya", "type": "video"]
+    case .search(let text):
+      return .url(["key": Constants.Youtube.appKey, "order": "date", "maxResults": "10", "q": text, "type": "video"])
     }
   }
   
   var headers: [String : Any]? {
     switch  self {
-    case .search:
+    case .search(_):
       return [:]
     }
   }

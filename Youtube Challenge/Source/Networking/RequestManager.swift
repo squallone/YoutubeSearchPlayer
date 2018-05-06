@@ -11,13 +11,21 @@ import UIKit
 class RequestManager {
 
   // MARK: - Properties
-  private let environment: Environment!
+  private let environment = Environment(httpProtocol: "http://", host: "www.googleapis.com", port: "")
   static let shared = RequestManager()
   
   // MARK: - Private
   
-  private init() {
-    environment = Environment(httpProtocol: "http://", host: "www.googleapis.com", port: "")
-
+  private init() { }
+  
+  func search(text: String, success:((Any) -> Void)) {
+   
+    NetworkDispatcher(environment: environment).fetch(request: SearchRequests.search(text: text), success: { (response) in
+      
+      
+      
+    }) { (error) in
+      
+    }
   }
 }

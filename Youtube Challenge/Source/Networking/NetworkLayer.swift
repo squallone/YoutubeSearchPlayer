@@ -23,7 +23,7 @@ enum ResponseType {
 protocol RequestProtocol {
   var path: String { get }
   var method: HTTPMethod { get }
-  var parameters: [String: Any] { get }
+  var parameters: RequestParams { get }
   var headers: [String: Any]? { get }
 }
 
@@ -43,8 +43,8 @@ enum HTTPMethod: String {
 
 // MARK: - Parameters
 enum RequestParams {
-  case body([String: Any])
-  case url(String)
+  case body([String: Any]?)
+  case url([String: Any]?)
 }
 
 // MARK: - Environment
@@ -54,7 +54,7 @@ struct Environment {
   var host: String
   var port: String
   
-  func baseURLString() -> String {
+  var urlString: String {
     return httpProtocol + host + port
   }
 }
@@ -78,6 +78,13 @@ class Response: ResponseProtocol {
     self.request = request
     self.type = .sucess
   }
+  
+  func jsonData() -> [AnyHashable: Any]? {
+    guard let responseData = data else { return nil }
+    let jsonData = try? JSONSerialization.jsonObject(with: responseData, options: [])
+    return jsonData as? [AnyHashable : Any]
+  }
+  
 }
 
 

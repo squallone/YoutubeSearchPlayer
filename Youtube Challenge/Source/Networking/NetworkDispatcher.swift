@@ -25,7 +25,7 @@ class NetworkDispatcher: Dispatcher {
   // MARK: - Public
   func fetch(request: RequestProtocol, success: @escaping (Response) -> Void, failure: @escaping (NSError) -> Void) {
     // Get URL
-    guard let apiURL = setupURL(request: request) else {
+    guard let apiURL = prepareURL(for: request) else {
       failure(NSError(domain: Constants.reverseDomain, code: 100, userInfo: [NSLocalizedDescriptionKey: "error"]))
       return
     }
@@ -47,9 +47,29 @@ class NetworkDispatcher: Dispatcher {
   }
   
   
-  func setupURL(request: RequestProtocol) -> URL? {
-    let baseURL = environment.baseURLString()
-    let url = baseURL + request.path
-    return URL(string: url)
+  func prepareURL(for request: RequestProtocol) -> URLRequest? {
+    
+    // Compose the url
+    var urlRequest = URLRequest(url: URL(string: environment.urlString)!)
+    
+    switch request.parameters {
+    case .url(let params):
+      // Parameters are part of the url
+      if let params = params as? [String: String] {
+        let queryParams = params.map({ (element) -> URLQueryItem in
+          return URLQueryItem(name: element.key, value: element.value)
+        })
+        guard var components = URLComponents(string: environment.urlString) else {
+          return nil
+        }
+        components.queryItems = queryParams
+        urlRequest.url = components.url
+      }
+
+    default:
+      break
+    }    
+    return nil
   }
+
 }
