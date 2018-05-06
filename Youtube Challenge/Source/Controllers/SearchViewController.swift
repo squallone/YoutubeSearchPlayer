@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
     tableView.dataSource = self
     tableView.delegate = self
     tableView.tableHeaderView = searchController.searchBar
+    tableView.register(SearchItemTableViewCell.self)
     tableView.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(tableView)
     return tableView
@@ -60,12 +61,19 @@ class SearchViewController: UIViewController {
 // MARK: - UITableView Data Source
 extension SearchViewController: UITableViewDataSource {
   
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 230
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.count()
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return UITableViewCell()
+    let itemViewModel = viewModel.dataSource[indexPath.row]    
+    let cell = tableView.dequeueReusableCell(for: indexPath) as SearchItemTableViewCell
+    cell.setup(viewModel: itemViewModel)
+    return cell
   }
 }
 

@@ -17,7 +17,7 @@ class SearchViewModel {
   }
   
   // MARK: - Properties
-  private var dataSource: [ItemModel] = []
+  var dataSource: [ItemViewModel] = []
   
   typealias Listener = (_ status: State) -> Void
   var listener: Listener?
@@ -39,7 +39,7 @@ class SearchViewModel {
   // MARK: - Networking
   func search(text: String) {
     state = .fetching
-    RequestManager.shared.search(text) { (items) in
+    RequestManager.shared.searchVideos(text: text) { [unowned self] (items) in
       self.dataSource = items
       self.state = .success
     }

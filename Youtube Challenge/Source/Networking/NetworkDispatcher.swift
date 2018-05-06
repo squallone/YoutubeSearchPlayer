@@ -32,7 +32,6 @@ class NetworkDispatcher: Dispatcher {
     
     // Get data
     let dataTask = session.dataTask(with: apiURL) { (data, urlResponse, error) in
-      
       // Validate data
       guard let responseData = data else {
         failure(NSError())
@@ -65,9 +64,7 @@ class NetworkDispatcher: Dispatcher {
         components.queryItems = queryParams
         components.path = request.path
         urlRequest.url = components.url
-    
       }
-
     default:
       break
     }    

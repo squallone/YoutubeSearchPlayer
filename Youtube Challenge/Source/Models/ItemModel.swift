@@ -10,10 +10,10 @@ import ObjectMapper
 
 class ItemModel {
 
-  var channelId: String?
-  var title: String?
-  var description: String?
-  var thumbailUrl: URL?
+  var kind: String?
+  var videoId: String?
+  var snippet: SnippetModel?
+  var detail: ContentDetaiModel?
   
   required convenience init?(map: Map) {
     self.init()
@@ -22,11 +22,12 @@ class ItemModel {
 
 extension ItemModel: Mappable {
   
+  // MARK: - Mapping
   func mapping(map: Map) {
-    channelId   <- map["snippet.channelId"]
-    title       <- map["snippet.title"]
-    description <- map["snippet.description"]
-    thumbailUrl <- map["snippet.thumbnails.high.url"]
+    videoId <- map["id.videoId"]
+    kind    <- map["id.kind"]
+    detail  <- map["contentDetails"]
+    snippet <- map["snippet"]
   }
   
   // MARK: - Deserialize
