@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmptySearchView" customModule="Youtube_Challenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="611"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="vqc-VR-B9O">
+                    <rect key="frame" x="135" y="240.5" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="MDn-Rg-fJP"/>
+                        <constraint firstAttribute="height" constant="150" id="piK-5e-pRI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-Gq-b2s">
+                    <rect key="frame" x="0.0" y="425.5" width="420" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OyC-Gq-b2s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6la-uR-XMx"/>
+                <constraint firstItem="vqc-VR-B9O" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="7qp-Nv-9rw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OyC-Gq-b2s" secondAttribute="trailing" id="Kde-7b-tPq"/>
+                <constraint firstItem="vqc-VR-B9O" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="efp-S0-d6u"/>
+                <constraint firstItem="OyC-Gq-b2s" firstAttribute="top" secondItem="vqc-VR-B9O" secondAttribute="bottom" constant="35" id="hI9-r9-9xx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="vqc-VR-B9O" id="EPe-5u-bph"/>
+                <outlet property="textLabel" destination="OyC-Gq-b2s" id="bOa-i7-nhJ"/>
+            </connections>
+            <point key="canvasLocation" x="-312" y="-458.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="150" height="150"/>
+    </resources>
+</document>

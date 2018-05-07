@@ -10,6 +10,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
   
+  struct Constants {
+    static let title = "Applicaster Challenge"
+  }
+  
   // MARK: - Properties
   let viewModel = SearchViewModel()
   
@@ -19,8 +23,10 @@ class SearchViewController: UIViewController {
     let tableView = UITableView()
     tableView.dataSource = self
     tableView.delegate = self
-    tableView.tableHeaderView = searchController.searchBar
+    tableView.separatorColor = .clear
+    tableView.backgroundColor = UIColor.searchBackgroundColor
     tableView.register(SearchItemTableViewCell.self)
+    tableView.backgroundView = EmptySearchView.fromNib()
     tableView.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(tableView)
     return tableView
@@ -29,14 +35,18 @@ class SearchViewController: UIViewController {
   // SearchController
   lazy var searchController: UISearchController = {
     let searchController = UISearchController(searchResultsController: nil)
-    searchController.searchResultsUpdater = self
+    searchController.obscuresBackgroundDuringPresentation = false
     searchController.searchBar.barStyle = .black
+    searchController.searchBar.delegate = self
+    searchController.searchResultsUpdater = self
+    searchController.hidesNavigationBarDuringPresentation = false
     return searchController
   }()
   
   // MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    setup()
     
     // Bind state
     viewModel.bindState { [unowned self] (state) in
@@ -44,25 +54,49 @@ class SearchViewController: UIViewController {
       case .fetching:
         break
       case .success:
+        self.tableView.backgroundView = nil
+        self.tableView.reloadData()
+      case .clear:
+        self.tableView.backgroundView = EmptySearchView.fromNib()
+        self.tableView.reloadData()
+      case .noSarchResults(let text):
+        self.tableView.backgroundView = EmptySearchView.set(text: "Your search \(text) did not match any videos ")
         self.tableView.reloadData()
       default:
         break
       }
     }
-    
-    viewModel.search(text: "yuya")
   }
   
   deinit {
     viewModel.unbindState()
   }
+  
+  // MARK: - UI
+  // Set UI customization
+  func setup() {
+    // Search controller
+    navigationItem.searchController = searchController
+    navigationItem.hidesSearchBarWhenScrolling = true
+    definesPresentationContext = true
+
+    // View Controller
+    view.backgroundColor = UIColor.searchBackgroundColor
+    navigationItem.title = Constants.title
+    // NavigationBar customization
+    guard let navigationController = navigationController else { return }
+    navigationController.navigationBar.prefersLargeTitles = true
+    let attributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+    navigationController.navigationBar.titleTextAttributes = attributes
+    navigationController.navigationBar.largeTitleTextAttributes = attributes
+    navigationController.navigationBar.installBlurEffect()
+  }
 }
 
 // MARK: - UITableView Data Source
 extension SearchViewController: UITableViewDataSource {
-  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 230
+    return 260
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,13 +113,29 @@ extension SearchViewController: UITableViewDataSource {
 
 // MARK: - UITableView Delegate
 extension SearchViewController: UITableViewDelegate {
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let itemViewModel = viewModel.dataSource[indexPath.row]
+    let youtubePlayerViewController = YoutubePlayerViewController(itemViewModel: itemViewModel)
+    self.navigationController?.pushViewController(youtubePlayerViewController, animated: true)
+  }
 }
 
 // MARK: - UISearchController Updater
 extension SearchViewController: UISearchResultsUpdating {
-  
   func updateSearchResults(for searchController: UISearchController) {
-    
+    if let text = searchController.searchBar.text, !text.isEmpty {
+      viewModel.search(text: text)
+    }
+  }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    viewModel.clearSerch()
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    searchController.isActive = false
   }
 }

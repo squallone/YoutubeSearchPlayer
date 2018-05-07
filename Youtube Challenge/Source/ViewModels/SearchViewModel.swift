@@ -12,12 +12,14 @@ class SearchViewModel {
   enum State {
     case fetching
     case success
+    case clear
+    case noSarchResults(text: String)
     case error
     case idle
   }
   
   // MARK: - Properties
-  var dataSource: [ItemViewModel] = []
+  private(set) var dataSource: [ItemViewModel] = []
   
   typealias Listener = (_ status: State) -> Void
   var listener: Listener?
@@ -41,13 +43,23 @@ class SearchViewModel {
     state = .fetching
     RequestManager.shared.searchVideos(text: text) { [unowned self] (items) in
       self.dataSource = items
-      self.state = .success
+
+      if items.count > 0 {
+        self.state = .success
+      } else {
+        self.state = .noSarchResults(text: text)
+      }
     }
   }
   
   // MARK: - Data
   func count() -> Int {
     return dataSource.count
+  }
+  
+  func clearSerch() {
+    self.dataSource = []
+    self.state = .clear
   }
   
   // MARK: - Private

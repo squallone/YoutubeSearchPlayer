@@ -7,5 +7,5 @@ target 'Youtube Challenge' do
 
   # Pods for Youtube Challenge
   pod 'ObjectMapper'
-
+  pod "youtube-ios-player-helper"
 end

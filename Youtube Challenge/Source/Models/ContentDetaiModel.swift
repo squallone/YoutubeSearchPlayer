@@ -20,6 +20,6 @@ class ContentDetaiModel {
 extension ContentDetaiModel: Mappable {
  
   func mapping(map: Map) {
-    duration <- map["duration"]
+    duration <- (map["duration"], YTDuration())
   }
 }

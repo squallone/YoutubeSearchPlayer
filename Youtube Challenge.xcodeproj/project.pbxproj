@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9EC12D7168BF2F37185D113E /* Pods_Youtube_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90F94384E144539644AA5C3 /* Pods_Youtube_Challenge.framework */; };
+		E9E0899520A021FB00BA0126 /* YTDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0899420A021FB00BA0126 /* YTDuration.swift */; };
+		E9E0899820A0226800BA0126 /* String+Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0899720A0226800BA0126 /* String+Youtube.swift */; };
 		E9FB54CD209C051E000B1E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54CC209C051E000B1E8B /* AppDelegate.swift */; };
 		E9FB54D4209C051F000B1E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FB54D3209C051F000B1E8B /* Assets.xcassets */; };
 		E9FB54D7209C051F000B1E8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FB54D5209C051F000B1E8B /* LaunchScreen.storyboard */; };
@@ -31,11 +33,21 @@
 		E9FB5509209FBA80000B1E8B /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB5508209FBA80000B1E8B /* ReusableView.swift */; };
 		E9FB550B209FBAB1000B1E8B /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB550A209FBAB1000B1E8B /* NibLoadableView.swift */; };
 		E9FB550D209FBFDF000B1E8B /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB550C209FBFDF000B1E8B /* ItemViewModel.swift */; };
+		E9FB550F209FCDC6000B1E8B /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB550E209FCDC6000B1E8B /* YoutubePlayerViewController.swift */; };
+		E9FB5512209FCF0A000B1E8B /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB5511209FCF0A000B1E8B /* SearchCoordinator.swift */; };
+		E9FB5514209FCF1D000B1E8B /* PlayerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB5513209FCF1D000B1E8B /* PlayerCoordinator.swift */; };
+		E9FB5516209FD6E0000B1E8B /* UIImageView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB5515209FD6E0000B1E8B /* UIImageView+Shadow.swift */; };
+		E9FB551A209FDC92000B1E8B /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB5519209FDC92000B1E8B /* UIColor+AppColors.swift */; };
+		E9FB551C209FDFE5000B1E8B /* UINavigationBar+Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB551B209FDFE5000B1E8B /* UINavigationBar+Blur.swift */; };
+		E9FB551E209FE3BB000B1E8B /* EmptySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB551D209FE3BB000B1E8B /* EmptySearchView.swift */; };
+		E9FB5520209FE3DB000B1E8B /* EmptySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FB551F209FE3DB000B1E8B /* EmptySearchView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61B23E26E82CE336C432D183 /* Pods-Youtube Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube Challenge/Pods-Youtube Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		B90F94384E144539644AA5C3 /* Pods_Youtube_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youtube_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E0899420A021FB00BA0126 /* YTDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTDuration.swift; sourceTree = "<group>"; };
+		E9E0899720A0226800BA0126 /* String+Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Youtube.swift"; sourceTree = "<group>"; };
 		E9FB54C9209C051E000B1E8B /* Youtube Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FB54CC209C051E000B1E8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9FB54D3209C051F000B1E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +73,14 @@
 		E9FB5508209FBA80000B1E8B /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E9FB550A209FBAB1000B1E8B /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		E9FB550C209FBFDF000B1E8B /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		E9FB550E209FCDC6000B1E8B /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
+		E9FB5511209FCF0A000B1E8B /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		E9FB5513209FCF1D000B1E8B /* PlayerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCoordinator.swift; sourceTree = "<group>"; };
+		E9FB5515209FD6E0000B1E8B /* UIImageView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Shadow.swift"; sourceTree = "<group>"; };
+		E9FB5519209FDC92000B1E8B /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		E9FB551B209FDFE5000B1E8B /* UINavigationBar+Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Blur.swift"; sourceTree = "<group>"; };
+		E9FB551D209FE3BB000B1E8B /* EmptySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchView.swift; sourceTree = "<group>"; };
+		E9FB551F209FE3DB000B1E8B /* EmptySearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptySearchView.xib; sourceTree = "<group>"; };
 		FB211DE914D3EDBAF5599CCA /* Pods-Youtube Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube Challenge/Pods-Youtube Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +102,14 @@
 				B90F94384E144539644AA5C3 /* Pods_Youtube_Challenge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9E0899620A021FF00BA0126 /* Transforms */ = {
+			isa = PBXGroup;
+			children = (
+				E9E0899420A021FB00BA0126 /* YTDuration.swift */,
+			);
+			path = Transforms;
 			sourceTree = "<group>";
 		};
 		E9FB54C0209C051E000B1E8B = {
@@ -107,6 +135,7 @@
 			children = (
 				E9FB54CC209C051E000B1E8B /* AppDelegate.swift */,
 				E9FB54EB209C05DB000B1E8B /* Constants.swift */,
+				E9FB5510209FCEF8000B1E8B /* Coordinator */,
 				E9FB5501209FB515000B1E8B /* Extension */,
 				E9FB54E0209C054D000B1E8B /* Controllers */,
 				E9FB54E1209C054D000B1E8B /* Models */,
@@ -135,6 +164,8 @@
 			children = (
 				E9FB54F6209F9EFE000B1E8B /* SearchItemTableViewCell.swift */,
 				E9FB54F7209F9EFE000B1E8B /* SearchItemTableViewCell.xib */,
+				E9FB551D209FE3BB000B1E8B /* EmptySearchView.swift */,
+				E9FB551F209FE3DB000B1E8B /* EmptySearchView.xib */,
 			);
 			name = Views;
 			path = Source/Views;
@@ -145,6 +176,7 @@
 			children = (
 				E9FB54E9209C057E000B1E8B /* SearchViewController.swift */,
 				E9FB54F1209E2BDE000B1E8B /* SearchViewController+Constraints.swift */,
+				E9FB550E209FCDC6000B1E8B /* YoutubePlayerViewController.swift */,
 			);
 			name = Controllers;
 			path = Source/Controllers;
@@ -156,6 +188,7 @@
 				E9FB54F4209EAECB000B1E8B /* ItemModel.swift */,
 				E9FB54FA209FA594000B1E8B /* SnippetModel.swift */,
 				E9FB54FC209FA5B9000B1E8B /* ContentDetaiModel.swift */,
+				E9E0899620A021FF00BA0126 /* Transforms */,
 			);
 			name = Models;
 			path = Source/Models;
@@ -187,12 +220,42 @@
 			children = (
 				E9FB550A209FBAB1000B1E8B /* NibLoadableView.swift */,
 				E9FB5508209FBA80000B1E8B /* ReusableView.swift */,
-				E9FB5505209FBA32000B1E8B /* UITableView+DequeueReusableCell.swift */,
-				E9FB5504209FBA32000B1E8B /* UITableView+Register.swift */,
-				E9FB5502209FB527000B1E8B /* UIImageView+Networking.swift */,
+				E9FB5518209FD72F000B1E8B /* TableView */,
+				E9FB5517209FD726000B1E8B /* UIImagewView */,
+				E9FB5519209FDC92000B1E8B /* UIColor+AppColors.swift */,
+				E9FB551B209FDFE5000B1E8B /* UINavigationBar+Blur.swift */,
+				E9E0899720A0226800BA0126 /* String+Youtube.swift */,
 			);
 			name = Extension;
 			path = Source/Extension;
+			sourceTree = "<group>";
+		};
+		E9FB5510209FCEF8000B1E8B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB5511209FCF0A000B1E8B /* SearchCoordinator.swift */,
+				E9FB5513209FCF1D000B1E8B /* PlayerCoordinator.swift */,
+			);
+			name = Coordinator;
+			path = Source/Coordinator;
+			sourceTree = "<group>";
+		};
+		E9FB5517209FD726000B1E8B /* UIImagewView */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB5502209FB527000B1E8B /* UIImageView+Networking.swift */,
+				E9FB5515209FD6E0000B1E8B /* UIImageView+Shadow.swift */,
+			);
+			path = UIImagewView;
+			sourceTree = "<group>";
+		};
+		E9FB5518209FD72F000B1E8B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB5505209FBA32000B1E8B /* UITableView+DequeueReusableCell.swift */,
+				E9FB5504209FBA32000B1E8B /* UITableView+Register.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		F2ED969662AAE245FE53FF44 /* Pods */ = {
@@ -264,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FB5520209FE3DB000B1E8B /* EmptySearchView.xib in Resources */,
 				E9FB54F9209F9EFE000B1E8B /* SearchItemTableViewCell.xib in Resources */,
 				E9FB54D7209C051F000B1E8B /* LaunchScreen.storyboard in Resources */,
 				E9FB54D4209C051F000B1E8B /* Assets.xcassets in Resources */,
@@ -299,10 +363,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Youtube Challenge/Pods-Youtube Challenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -316,20 +382,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FB5516209FD6E0000B1E8B /* UIImageView+Shadow.swift in Sources */,
+				E9FB551A209FDC92000B1E8B /* UIColor+AppColors.swift in Sources */,
+				E9E0899520A021FB00BA0126 /* YTDuration.swift in Sources */,
 				E9FB54F5209EAECB000B1E8B /* ItemModel.swift in Sources */,
 				E9FB54EE209E167E000B1E8B /* SearchRequests.swift in Sources */,
+				E9FB5512209FCF0A000B1E8B /* SearchCoordinator.swift in Sources */,
 				E9FB54EA209C057E000B1E8B /* SearchViewController.swift in Sources */,
+				E9FB5514209FCF1D000B1E8B /* PlayerCoordinator.swift in Sources */,
 				E9FB54F0209E2BA8000B1E8B /* SearchViewModel.swift in Sources */,
 				E9FB5507209FBA33000B1E8B /* UITableView+DequeueReusableCell.swift in Sources */,
+				E9FB551E209FE3BB000B1E8B /* EmptySearchView.swift in Sources */,
 				E9FB54FD209FA5B9000B1E8B /* ContentDetaiModel.swift in Sources */,
 				E9FB54F8209F9EFE000B1E8B /* SearchItemTableViewCell.swift in Sources */,
 				E9FB54FB209FA594000B1E8B /* SnippetModel.swift in Sources */,
 				E9FB54FF209FA810000B1E8B /* VideosRequests.swift in Sources */,
 				E9FB5509209FBA80000B1E8B /* ReusableView.swift in Sources */,
+				E9FB551C209FDFE5000B1E8B /* UINavigationBar+Blur.swift in Sources */,
 				E9FB54E7209C054D000B1E8B /* NetworkLayer.swift in Sources */,
+				E9E0899820A0226800BA0126 /* String+Youtube.swift in Sources */,
 				E9FB54F2209E2BDE000B1E8B /* SearchViewController+Constraints.swift in Sources */,
 				E9FB54E6209C054D000B1E8B /* RequestManager.swift in Sources */,
 				E9FB550D209FBFDF000B1E8B /* ItemViewModel.swift in Sources */,
+				E9FB550F209FCDC6000B1E8B /* YoutubePlayerViewController.swift in Sources */,
 				E9FB5503209FB527000B1E8B /* UIImageView+Networking.swift in Sources */,
 				E9FB550B209FBAB1000B1E8B /* NibLoadableView.swift in Sources */,
 				E9FB54E8209C054D000B1E8B /* NetworkDispatcher.swift in Sources */,
@@ -404,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -458,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

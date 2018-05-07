@@ -1,16 +1,20 @@
 PODS:
   - ObjectMapper (3.1.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - ObjectMapper
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - ObjectMapper
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: ac65e9c6f421739f35f972c867001875b859cebd
+PODFILE CHECKSUM: a265ce10766d2088480272fa1fd029ad6d5475f3
 
 COCOAPODS: 1.5.0

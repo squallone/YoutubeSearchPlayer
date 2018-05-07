@@ -14,7 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+      
+      // Status bar
+      UIApplication.shared.statusBarStyle = .lightContent
+      // Keyboard
+      UITextField.appearance().keyboardAppearance = .dark
+      // Cancel button
+      let cancelButtonAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+      UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes , for: .normal)
       
       window = UIWindow(frame: UIScreen.main.bounds)
       let searchViewController = SearchViewController()

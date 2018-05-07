@@ -15,5 +15,9 @@ extension NibLoadableView where Self: UIView {
     static var nibName: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
+  
+  static func fromNib<T: UIView>() -> T {
+    return Bundle.main.loadNibNamed(nibName, owner: nil, options: nil)![0] as! T
+  }
 }
 

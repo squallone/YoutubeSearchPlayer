@@ -27,7 +27,12 @@ extension UIImageView {
       DispatchQueue.main.async {
         if let image = UIImage(data: data!) {
           imageCache.setObject(image, forKey: imageUrl.absoluteString as NSString)
-          self.image = image
+          
+          UIView.transition(with: self,
+                            duration:0.2,
+                            options: .transitionCrossDissolve,
+                            animations: {  self.image = image},
+                            completion: nil)          
         }
       }
     }).resume()
