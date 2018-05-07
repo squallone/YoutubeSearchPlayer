@@ -35,7 +35,7 @@ class YoutubePlayerViewController: UIViewController {
   // MARK: - View Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    self.navigationItem.title = "Youtube Player"
     playerView.load(withVideoId: itemViewModel.videoId)
     playerView.delegate = self
   }
