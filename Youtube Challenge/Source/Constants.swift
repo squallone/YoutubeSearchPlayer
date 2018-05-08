@@ -10,6 +10,11 @@ struct Constants {
   
   static let reverseDomain = "com.applicaster.youtube-search"
   
+  struct API {
+    static let environment = Environment(httpProtocol: "https://", host: "www.googleapis.com", port: "")
+
+  }
+  
   struct Youtube {
     static let appKey = "AIzaSyC6oC_pOXuljjiOSFVLbmjejE92YSQ5oSk"
   }

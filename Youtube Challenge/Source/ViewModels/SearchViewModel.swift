@@ -41,7 +41,7 @@ class SearchViewModel {
   // MARK: - Networking
   func search(text: String) {
     state = .fetching
-    RequestManager.shared.searchVideos(text: text) { [unowned self] (items) in
+    RequestManager.shared().searchVideos(text: text) { [unowned self] (items) in
       self.dataSource = items
 
       if items.count > 0 {

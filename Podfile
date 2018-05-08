@@ -8,4 +8,9 @@ target 'Youtube Challenge' do
   # Pods for Youtube Challenge
   pod 'ObjectMapper'
   pod "youtube-ios-player-helper"
+  
+  target 'Youtube ChallengeTests' do
+    inherit! :search_paths
+    pod 'ObjectMapper'
+  end
 end
