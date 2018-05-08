@@ -43,6 +43,8 @@
 		E92C04F820A18BED004E2102 /* RequestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92C04F720A18BED004E2102 /* RequestsTest.swift */; };
 		E92C04FC20A19304004E2102 /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = E92C04FB20A19304004E2102 /* videos.json */; };
 		E92C04FE20A1933A004E2102 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = E92C04FD20A1933A004E2102 /* search.json */; };
+		E92C050020A19C19004E2102 /* SearchViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92C04FF20A19C19004E2102 /* SearchViewController+Search.swift */; };
+		E92C050220A19C6F004E2102 /* SearchViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92C050120A19C6F004E2102 /* SearchViewController+TableView.swift */; };
 		E9E0899520A021FB00BA0126 /* YTDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0899420A021FB00BA0126 /* YTDuration.swift */; };
 		E9E0899820A0226800BA0126 /* String+Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0899720A0226800BA0126 /* String+Youtube.swift */; };
 		E9FB54CD209C051E000B1E8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB54CC209C051E000B1E8B /* AppDelegate.swift */; };
@@ -101,6 +103,8 @@
 		E92C04F720A18BED004E2102 /* RequestsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTest.swift; sourceTree = "<group>"; };
 		E92C04FB20A19304004E2102 /* videos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = videos.json; sourceTree = "<group>"; };
 		E92C04FD20A1933A004E2102 /* search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		E92C04FF20A19C19004E2102 /* SearchViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Search.swift"; sourceTree = "<group>"; };
+		E92C050120A19C6F004E2102 /* SearchViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+TableView.swift"; sourceTree = "<group>"; };
 		E9E0899420A021FB00BA0126 /* YTDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTDuration.swift; sourceTree = "<group>"; };
 		E9E0899720A0226800BA0126 /* String+Youtube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Youtube.swift"; sourceTree = "<group>"; };
 		E9FB54C9209C051E000B1E8B /* Youtube Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +185,17 @@
 			path = "Youtube ChallengeTests";
 			sourceTree = "<group>";
 		};
+		E92C050320A19C83004E2102 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E9FB54E9209C057E000B1E8B /* SearchViewController.swift */,
+				E92C04FF20A19C19004E2102 /* SearchViewController+Search.swift */,
+				E92C050120A19C6F004E2102 /* SearchViewController+TableView.swift */,
+				E9FB54F1209E2BDE000B1E8B /* SearchViewController+Constraints.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		E9E0899620A021FF00BA0126 /* Transforms */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,8 +268,7 @@
 		E9FB54E0209C054D000B1E8B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E9FB54E9209C057E000B1E8B /* SearchViewController.swift */,
-				E9FB54F1209E2BDE000B1E8B /* SearchViewController+Constraints.swift */,
+				E92C050320A19C83004E2102 /* Search */,
 				E9FB550E209FCDC6000B1E8B /* YoutubePlayerViewController.swift */,
 			);
 			name = Controllers;
@@ -576,6 +590,7 @@
 				E9FB551A209FDC92000B1E8B /* UIColor+AppColors.swift in Sources */,
 				E9E0899520A021FB00BA0126 /* YTDuration.swift in Sources */,
 				E9FB54F5209EAECB000B1E8B /* ItemModel.swift in Sources */,
+				E92C050020A19C19004E2102 /* SearchViewController+Search.swift in Sources */,
 				E9FB54EE209E167E000B1E8B /* SearchRequests.swift in Sources */,
 				E9FB5512209FCF0A000B1E8B /* SearchCoordinator.swift in Sources */,
 				E9FB54EA209C057E000B1E8B /* SearchViewController.swift in Sources */,
@@ -593,6 +608,7 @@
 				E9E0899820A0226800BA0126 /* String+Youtube.swift in Sources */,
 				E9FB54F2209E2BDE000B1E8B /* SearchViewController+Constraints.swift in Sources */,
 				E9FB54E6209C054D000B1E8B /* RequestManager.swift in Sources */,
+				E92C050220A19C6F004E2102 /* SearchViewController+TableView.swift in Sources */,
 				E9FB550D209FBFDF000B1E8B /* ItemViewModel.swift in Sources */,
 				E9FB550F209FCDC6000B1E8B /* YoutubePlayerViewController.swift in Sources */,
 				E9FB5503209FB527000B1E8B /* UIImageView+Networking.swift in Sources */,

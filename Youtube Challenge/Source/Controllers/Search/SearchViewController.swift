@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
   
   struct Constants {
     static let title = "Applicaster Challenge"
+    static let height: CGFloat = 260
   }
   
   // MARK: - Properties
@@ -90,52 +91,5 @@ class SearchViewController: UIViewController {
     navigationController.navigationBar.titleTextAttributes = attributes
     navigationController.navigationBar.largeTitleTextAttributes = attributes
     navigationController.navigationBar.installBlurEffect()
-  }
-}
-
-// MARK: - UITableView Data Source
-extension SearchViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 260
-  }
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel.count()
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let itemViewModel = viewModel.dataSource[indexPath.row]    
-    let cell = tableView.dequeueReusableCell(for: indexPath) as SearchItemTableViewCell
-    cell.setup(viewModel: itemViewModel)
-    return cell
-  }
-}
-
-// MARK: - UITableView Delegate
-extension SearchViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let itemViewModel = viewModel.dataSource[indexPath.row]
-    let youtubePlayerViewController = YoutubePlayerViewController(itemViewModel: itemViewModel)
-    self.navigationController?.pushViewController(youtubePlayerViewController, animated: true)
-  }
-}
-
-// MARK: - UISearchController Updater
-extension SearchViewController: UISearchResultsUpdating {
-  func updateSearchResults(for searchController: UISearchController) {
-    if let text = searchController.searchBar.text, !text.isEmpty {
-      viewModel.search(text: text)
-    }
-  }
-}
-
-extension SearchViewController: UISearchBarDelegate {
-  
-  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    viewModel.clearSerch()
-  }
-  
-  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    searchController.isActive = false
   }
 }
