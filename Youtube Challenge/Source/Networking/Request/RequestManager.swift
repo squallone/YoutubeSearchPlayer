@@ -26,7 +26,7 @@ class RequestManager {
   func searchVideos(text: String, success: @escaping (([ItemViewModel]) -> Void)) {
     var itemsViewModel: [ItemViewModel] = []
     
-    self.search(text) { [unowned self] (items) in
+    search(text) { (items) in
       self.fetchVideo(items: items, success: { (itemsDetail) in
         // Set contentDetail on search items
         for (index, itemDetail) in itemsDetail.enumerated() {
