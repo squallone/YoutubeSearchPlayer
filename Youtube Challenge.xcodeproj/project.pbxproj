@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7B245221CAE8AE005C226B /* SearchViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92C050120A19C6F004E2102 /* SearchViewController+TableView.swift */; };
+		7D7B245321CAE8B1005C226B /* SearchViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92C04FF20A19C19004E2102 /* SearchViewController+Search.swift */; };
 		9EC12D7168BF2F37185D113E /* Pods_Youtube_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90F94384E144539644AA5C3 /* Pods_Youtube_Challenge.framework */; };
 		C139369C9D90579BD1CB4C8B /* Pods_Youtube_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DAAA05569D2D59A05F8BBD /* Pods_Youtube_ChallengeTests.framework */; };
 		E92C04D520A161BF004E2102 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92C04D420A161BF004E2102 /* RequestManagerTests.swift */; };
@@ -563,9 +565,11 @@
 				E92C04DF20A179D6004E2102 /* ItemViewModel.swift in Sources */,
 				E92C04E720A179E9004E2102 /* ReusableView.swift in Sources */,
 				E92C04ED20A179EA004E2102 /* UINavigationBar+Blur.swift in Sources */,
+				7D7B245221CAE8AE005C226B /* SearchViewController+TableView.swift in Sources */,
 				E92C04F220A179EA004E2102 /* YTDuration.swift in Sources */,
 				E92C04E920A179E9004E2102 /* UITableView+Register.swift in Sources */,
 				E92C04F020A179EA004E2102 /* SearchViewController+Constraints.swift in Sources */,
+				7D7B245321CAE8B1005C226B /* SearchViewController+Search.swift in Sources */,
 				E92C04E820A179E9004E2102 /* UITableView+DequeueReusableCell.swift in Sources */,
 				E92C04EA20A179E9004E2102 /* UIImageView+Networking.swift in Sources */,
 				E92C04D720A16323004E2102 /* ItemModel.swift in Sources */,
