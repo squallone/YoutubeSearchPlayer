@@ -1,5 +1,5 @@
 #### Master branch build status: 
-![](https://travis-ci.org/[squallone]/Youtube-Challenge.svg?branch=develop)
+![](https://travis-ci.org/squallone/Youtube-Challenge.svg?branch=develop)
 
 
 # Youtube Search Challenge
