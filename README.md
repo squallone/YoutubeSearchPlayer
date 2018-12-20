@@ -1,3 +1,7 @@
+####Master branch build status: 
+![](https://travis-ci.org/[squallone]/Youtube-Challenge.svg?branch=develop)
+
+
 # Youtube Search Challenge
 
 An iOS application that search Youtube videos using the Google's public API using Model-View-ViewModel (MVVM) with the help of this architecture we separate the business logic and presentational logic from the view logic.

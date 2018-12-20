@@ -1,0 +1,4 @@
+language: swift
+xcode_workspace: Youtube Challenge.xcworkspace # path to your xcodeproj folder
+xcode_scheme: Youtube Challenge
+xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
