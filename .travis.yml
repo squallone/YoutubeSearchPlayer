@@ -1,4 +1,4 @@
-language: objective-c
+language: swift
 xcode_workspace: Youtube Challenge.xcworkspace # path to your xcodeproj folder
 xcode_scheme: Youtube Challenge
-xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
+xcode_destination: platform=iOS Simulator,OS=12.0, name=iPhone X
